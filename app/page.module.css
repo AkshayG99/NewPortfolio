@@ -1,0 +1,119 @@
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 40px 120px 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px 20px 80px 20px;
+  }
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  margin-bottom: 100px; 
+}
+
+@media (max-width: 850px) {
+  .header {
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.name {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  color: var(--foreground);
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcon {
+  color: var(--foreground-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.socialIcon[data-email]::after {
+  content: attr(data-email);
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.socialIcon[data-email]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.bioSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 600px;
+}
+
+.bioText {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--foreground-secondary);
+}
+
+.bioText em {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.link {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+

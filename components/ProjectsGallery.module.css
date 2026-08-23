@@ -1,0 +1,90 @@
+.filters {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.filterBtn {
+  background: transparent;
+  border: 1px solid var(--border, #333);
+  color: var(--foreground-muted);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  color: var(--foreground);
+  border-color: var(--foreground-muted);
+}
+
+.filterBtn.active {
+  background: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+/* Projects Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4px;
+  row-gap: 60px;
+  margin: 0 -24px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    margin: 0 -8px;
+  }
+}
+
+/* Project Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.titleRow {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--foreground);
+}
+
+.titleRow em {
+  color: var(--foreground-muted);
+  font-style: normal;
+}
+
+.subtitle {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--foreground-muted);
+}

@@ -1,0 +1,109 @@
+:root {
+  --background: #fafafa;
+  --foreground: #111111;
+  --foreground-muted: #737373;
+  --foreground-secondary: #262626;
+  --markdown-text: #404040;
+  --border: #e5e5e5;
+  --border-hover: #d4d4d4;
+  --card-bg: #ffffff;
+  --scrollbar-thumb: #cccccc;
+  --scrollbar-thumb-hover: #aaaaaa;
+  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --max-width: 1440px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+/* Base styles for parsing markdown HTML */
+.markdown-content {
+  line-height: 1.6;
+  font-size: 0.96rem;
+  color: var(--markdown-text);
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 400;
+  color: var(--foreground);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content h3 {
+  font-size: 1.45rem;
+}
+
+.markdown-content p {
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+}
+
+.markdown-content strong {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.markdown-content blockquote {
+  border-left: 2px solid var(--foreground);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--foreground-muted);
+}
+
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
