@@ -91,19 +91,31 @@ button {
 
 
 /* Custom Scrollbar */
-::-webkit-scrollbar {
+html {
+  scrollbar-color: transparent transparent;
+}
+
+html[data-scrolling="true"] {
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+html::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--background);
+html::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
+html::-webkit-scrollbar-thumb {
+  background: transparent;
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+html[data-scrolling="true"]::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+}
+
+html[data-scrolling="true"]::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb-hover);
 }

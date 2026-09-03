@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
+import ScrollbarVisibility from "@/components/ScrollbarVisibility";
 import "./globals.css";
 
 const inter = Inter({
@@ -26,7 +27,10 @@ export default function RootLayout({
   }>) {
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`} suppressHydrationWarning>
-      <body>{children}</body>
+      <body>
+        <ScrollbarVisibility />
+        {children}
+      </body>
     </html>
   );
 }
