@@ -1,6 +1,7 @@
 import { getSortedProjectsData } from "@/lib/projects";
 import ProjectsGallery from "@/components/ProjectsGallery";
 import CopyEmailIcon from "@/components/CopyEmailIcon";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -91,7 +92,16 @@ export default function Home() {
             Leveraging Machine Learning & Data Science.
           </p>
           <p className={styles.bioText}>
-            Software Engineering @ UWaterloo.
+            Software Engineering @
+            <Image
+              src="/images/uwaterloo-crest.jpg"
+              alt=""
+              width={16}
+              height={16}
+              className={styles.schoolLogo}
+              aria-hidden="true"
+            />
+            UWaterloo.
           </p>
           <p className={styles.bioText}>
             Previously with <Link href="/projects/rbc-llm-routing" className={styles.link}>RBC</Link>.

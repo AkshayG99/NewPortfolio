@@ -14,15 +14,18 @@
 /* Header Section */
 .header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
-  gap: 32px;
+  justify-content: space-between;
+  gap: 64px;
   margin-bottom: 100px; 
 }
 
 @media (max-width: 850px) {
   .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 24px;
     margin-bottom: 60px;
   }
@@ -31,8 +34,15 @@
 .logoSection {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  flex-shrink: 0;
   gap: 20px;
+}
+
+@media (max-width: 850px) {
+  .logoSection {
+    align-items: center;
+  }
 }
 
 .name {
@@ -48,7 +58,7 @@
   display: flex;
   gap: 16px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .socialIcon {
@@ -88,9 +98,17 @@
 .bioSection {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   gap: 16px;
   max-width: 600px;
+  text-align: right;
+}
+
+@media (max-width: 850px) {
+  .bioSection {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .bioText {
@@ -98,6 +116,15 @@
   line-height: 1.6;
   font-weight: 300;
   color: var(--foreground-secondary);
+}
+
+.schoolLogo {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px 0 4px;
+  object-fit: contain;
+  vertical-align: -0.15em;
 }
 
 .bioText em {
@@ -116,4 +143,3 @@
 .link:hover {
   opacity: 0.7;
 }
-
