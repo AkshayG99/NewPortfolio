@@ -3,7 +3,7 @@ title: "NASA/NSS Space Settlement Contest"
 year: "2025"
 rank: 2
 subtitle: "Machine Learning & CAD Lead - Placed 3rd globally out of 26,000 students"
-image: "/images/nss.jpg"
+image: "/images/nss.JPG"
 github: "https://drive.google.com/file/d/17DciSptPG8BcOHu2WV_bXq326ZrVe0ez/view?usp=sharing"
 linkLabel: "Report"
 timeline: "Jun 2023 – Present"
