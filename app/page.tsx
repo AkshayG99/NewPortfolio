@@ -94,7 +94,7 @@ export default function Home() {
             Software Engineering @ UWaterloo.
           </p>
           <p className={styles.bioText}>
-            Previously with <Link href="/projects/rbc" className={styles.link}>RBC</Link>.
+            Previously with <Link href="/projects/rbc-llm-routing" className={styles.link}>RBC</Link>.
           </p>
         </div>
       </header>
