@@ -30,7 +30,6 @@ export interface ProjectData {
   overview: string;
   contentHtml?: string;
   linkLabel?: string;
-  video?: string;
   type?: string;
   rank?: number;
 }

@@ -6,7 +6,6 @@ subtitle: "Hack the North 2026 — Best Use of Vultr & Runner-up for Best Use of
 image: "/images/triviality.png"
 github: "https://brojust.study/"
 linkLabel: "Check it out"
-video: "/videos/triviality.mp4"
 timeline: "Sep 2026"
 tools: "Next.js, TypeScript, Python, openJiuwen SwarmFlow, Node.js, MongoDB, Redis, Lean 4, Vultr"
 overview: "Built an AI research workspace that coordinates specialized agent teams to explore mathematical problems, challenge proposed solutions, and verify conclusions with formal proof checkers."
