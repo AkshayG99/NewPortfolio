@@ -58,10 +58,27 @@
   object-fit: cover;
 }
 
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.thumbnailLink {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 .cardInfo {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  color: inherit;
 }
 
 .titleRow {

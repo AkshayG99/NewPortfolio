@@ -5,6 +5,13 @@ import { marked } from 'marked';
 
 const projectsDirectory = path.join(process.cwd(), 'projects');
 
+function openExternalLinksInNewTab(html: string): string {
+  return html.replace(
+    /<a href="(https?:\/\/[^\"]+)"(?![^>]*\btarget=)/g,
+    '<a href="$1" target="_blank" rel="noopener noreferrer"',
+  );
+}
+
 export interface FeatureItem {
   title: string;
   description: string;
@@ -23,6 +30,7 @@ export interface ProjectData {
   overview: string;
   contentHtml?: string;
   linkLabel?: string;
+  video?: string;
   type?: string;
   rank?: number;
 }
@@ -95,7 +103,8 @@ export async function getProjectData(slug: string): Promise<ProjectData | null> 
   const matterResult = matter(fileContents);
 
   // Convert markdown to HTML
-  const contentHtml = await marked.parse(matterResult.content);
+  const parsedContent = await marked.parse(matterResult.content);
+  const contentHtml = openExternalLinksInNewTab(parsedContent);
 
   return {
     slug,
