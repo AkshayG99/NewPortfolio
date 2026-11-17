@@ -3,9 +3,9 @@ title: "RBC Borealis"
 year: "2026"
 rank: 0
 type: "Work"
-subtitle: "Part-Time Machine Learning Researcher - Tabular Reasoning"
+subtitle: "Machine Learning Researcher - Tabular Reasoning"
 image: "/images/rbc-borealis-researcher.jpg"
-timeline: "Jun 2026 - Sep 2026"
+timeline: "Sept 2026 - Current"
 tools: "Qwen, DisCO, GRPO, Llama Factory, Python, PR-AUC"
 overview: "Redesigned the reward and evaluation framework for an RL-trained tabular reasoning LLM to address minority-class collapse on imbalanced credit datasets."
 features:
@@ -28,7 +28,7 @@ Tabular reasoning models trained on highly imbalanced credit datasets can learn 
 
 ### Overview & Impact
 
-As a **Part-Time Machine Learning Researcher at RBC Borealis**, I redesigned the reinforcement-learning reward and evaluation framework for a tabular reasoning LLM. The work focused on improving minority-class detection on skewed credit datasets while preserving the model's ability to produce clear chain-of-thought rationales.
+As a **Machine Learning Researcher at RBC Borealis**, I redesigned the reinforcement-learning reward and evaluation framework for a tabular reasoning LLM. The work focused on improving minority-class detection on skewed credit datasets while preserving the model's ability to produce clear chain-of-thought rationales.
 
 ### Technical Implementation
 
